@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <meta name="description" content="Pulling Down StrongHolds - Christian rapper using music to spread faith, hope, and truth through powerful messages in hip hop, rap, and trap.">
+  <meta name="keywords" content="Christian rapper, gospel rap, Pulling Down StrongHolds, faith-based music, Christian hip hop, inspirational rap">
+  <meta name="author" content="Pulling Down StrongHolds" />
+  <meta property="og:title" content="Pulling Down StrongHolds | Christian Rapper">
+  <meta property="og:description" content="Spreading faith through powerful Christian rap and hip hop music">
+  <meta property="og:type" content="website">
+  <!-- Update the image URL below with your actual image -->
+  <meta property="og:image" content="https://images.unsplash.com/photo-1511671782779-c97d3d27a9d6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <title>Pulling Down StrongHolds | Christian Rapper</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✝️</text></svg>" type="image/svg+xml" />
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <style>
+    :root {
+      --primary-color: #163257;
+      --secondary-color: #0f2440;
+      --dark-bg: #000;
+      --darker-bg: #111;
+      --text-color: #fff;
+      --text-muted: #ddd;
+    }
+    
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: var(--dark-bg);
+      color: var(--text-color);
+      overflow-x: hidden;
+    }
+    
+    h1, h2, h3, h4, h5, .navbar-brand {
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 700;
+    }
+
+    .navbar {
+      background-color: var(--darker-bg);
+      padding: 15px 0;
+      transition: all 0.4s ease;
+    }
+    
+    .navbar-scrolled {
+      padding: 8px 0;
+      box-shadow: 0 4px 15px rgba(22, 50, 87, 0.2);
+    }
+
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                  url('images/hero.jpg') no-repeat center center;
+      background-size: cover;
+      height: 130vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 1000%;
+      background: radial-gradient(circle at center, transparent 20%, var(--dark-bg) 90%);
+      opacity: 0.6;
+      z-index: 1;
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero h1 {
+      color: var(--primary-color);
+      font-size: 4rem;
+      margin-bottom: 50px;
+      text-shadow: 0 0 10px rgba(22, 50, 87, 0.5);
+      animation: glow 2s infinite alternate;
+    }
+    
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 5px rgba(22, 50, 87, 0.5);
+      }
+      to {
+        text-shadow: 0 0 20px rgba(22, 50, 87, 0.8), 0 0 30px rgba(22, 50, 87, 0.6);
+      }
+    }
+
+    .hero p {
+      font-size: 1.4rem;
+      color: var(--text-muted);
+      margin-bottom: 30px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .btn-custom {
+      background-color: transparent;
+      border: 2px solid var(--primary-color);
+      color: var(--primary-color);
+      padding: 12px 30px;
+      transition: all 0.4s;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+    
+    .btn-custom::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: var(--primary-color);
+      transition: all 0.4s;
+      z-index: -1;
+    }
+    
+    .btn-custom:hover {
+      color: #000;
+    }
+    
+    .btn-custom:hover::before {
+      left: 0;
+    }
+
+    .section-dark {
+      background-color: var(--darker-bg);
+      padding: 80px 0;
+      position: relative;
+    }
+    
+    .section-title {
+      color: var(--primary-color);
+      margin-bottom: 40px;
+      position: relative;
+      display: inline-block;
+    }
+    
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background: var(--primary-color);
+    }
+
+    .social-icons a {
+      color: var(--primary-color);
+      font-size: 2rem;
+      margin: 0 15px;
+      transition: 0.4s;
+      display: inline-block;
+    }
+    
+    .social-icons a:hover {
+      color: var(--text-color);
+      transform: translateY(-5px);
+    }
+
+    .message-form input, .message-form textarea {
+      background-color: rgba(0, 0, 0, 0.6);
+      border: 2px solid var(--secondary-color);
+      color: var(--text-color);
+      padding: 12px 15px;
+      border-radius: 4px;
+      transition: all 0.3s;
+    }
+    
+    .message-form input:focus, 
+    .message-form textarea:focus {
+      background-color: rgba(0, 0, 0, 0.8);
+      border-color: var(--primary-color);
+      box-shadow: 0 0 10px rgba(22, 50, 87, 0.3);
+      outline: none;
+    }
+
+    .message-form input::placeholder,
+    .message-form textarea::placeholder {
+      color: #999;
+    }
+    
+    /* About Section */
+    .about-content {
+      background: rgba(0, 0, 0, 0.4);
+      padding: 30px;
+      border-radius: 10px;
+      border-left: 4px solid var(--primary-color);
+    }
+    
+    /* Gallery Carousel - FIXED */
+    .gallery-carousel {
+      padding: 30px 0;
+    }
+    
+    .carousel-item {
+      height: 500px;
+      overflow: hidden;
+    }
+    
+    .carousel-item img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+    
+    .carousel-caption {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      border-radius: 5px;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80%;
+    }
+    
+    .carousel-control-prev, 
+    .carousel-control-next {
+      width: 50px;
+      height: 50px;
+      background: rgba(22, 50, 87, 0.3);
+      border-radius: 50%;
+      top: 50%;
+      transform: translateY(-50%);
+      opacity: 0.8;
+    }
+    
+    .carousel-control-prev {
+      left: 20px;
+    }
+    
+    .carousel-control-next {
+      right: 20px;
+    }
+    
+    .carousel-control-prev:hover,
+    .carousel-control-next:hover {
+      opacity: 1;
+      background: rgba(22, 50, 87, 0.6);
+    }
+    
+    /* Carousel Indicators */
+    .carousel-indicators button {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      margin: 0 5px;
+      background-color: var(--primary-color);
+    }
+    
+    /* Particles Background - UPDATED: Larger and White */
+    .particles-container {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
+    
+    .particle {
+      position: absolute;
+      background: #ffffff;
+      border-radius: 50%;
+      opacity: 0.7;
+      animation: float 15s infinite linear;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    }
+    
+    @keyframes float {
+      0% {
+        transform: translateY(0) translateX(0) rotate(0deg);
+        opacity: 0.7;
+      }
+      100% {
+        transform: translateY(-100vh) translateX(100px) rotate(360deg);
+        opacity: 0;
+      }
+    }
+    
+    /* Audio Wave Animation */
+    .audio-waves {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 80px;
+      margin: 30px 0;
+    }
+    
+    .wave {
+      width: 5px;
+      height: 30px;
+      background: var(--primary-color);
+      margin: 0 3px;
+      border-radius: 10px;
+      animation: wave 1.2s infinite ease-in-out;
+    }
+    
+    .wave:nth-child(2) {
+      animation-delay: 0.1s;
+    }
+    
+    .wave:nth-child(3) {
+      animation-delay: 0.2s;
+    }
+    
+    .wave:nth-child(4) {
+      animation-delay: 0.3s;
+    }
+    
+    .wave:nth-child(5) {
+      animation-delay: 0.4s;
+    }
+    
+    @keyframes wave {
+      0%, 100% {
+        transform: scaleY(0.5);
+      }
+      50% {
+        transform: scaleY(1.5);
+      }
+    }
+    
+    /* Footer */
+    footer {
+      background-color: var(--dark-bg);
+      color: #666;
+      padding: 30px 0;
+      position: relative;
+    }
+    
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+      
+      .hero p {
+        font-size: 1.1rem;
+      }
+      
+      .carousel-item {
+        height: 300px;
+      }
+      
+      .carousel-caption {
+        bottom: 20px;
+        padding: 10px;
+      }
+      
+      .carousel-caption h5 {
+        font-size: 1rem;
+      }
+      
+      .carousel-caption p {
+        font-size: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#" style="color: #163257;">Pulling Down StrongHolds</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#music">Music</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#gallery">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#message">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="particles-container" id="particles"></div>
+    <div class="container hero-content">
+      <h1>Pulling Down StrongHolds</h1>
+      <p>Christian rapper sharing the message of Christ through rap, trap, and hip hop. Music with purpose. Faith in every verse.</p>
+      <a href="#music" class="btn btn-custom mt-3">Listen Now</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section-dark">
+    <div class="container">
+      <h2 class="section-title text-center">About The Ministry</h2>
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <div class="about-content">
+            <p>Pulling Down StrongHolds is a Christian rap ministry dedicated to spreading the Gospel through the power of hip hop music. Founded on the scripture 2 Corinthians 10:4, "The weapons we fight with are not the weapons of the world. On the contrary, they have divine power to demolish strongholds."</p>
+            <p>Our mission is to reach the lost, encourage believers, and tear down spiritual strongholds through Christ-centered lyrics and infectious beats. Combining elements of trap, hip hop, and rap with biblical truth, we create music that resonates with both young and old.</p>
+            <p>Each track is prayerfully crafted to minister to listeners where they are, addressing real-life struggles with biblical solutions and the hope found in Jesus Christ.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SoundCloud Section -->
+  <section id="music" class="section-dark text-center">
+    <div class="container">
+      <h2 class="section-title">🎧 Latest Releases</h2>
+      
+      <div class="audio-waves">
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+      </div>
+      
+     <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="muted" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/2071399542&color=%23163257&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/daniel-de-leon" title="Pulling Down Strongholds" target="_blank" style="color: #cccccc; text-decoration: none;">Pulling Down Strongholds</a> · <a href="https://soundcloud.com/daniel-de-leon/sets/derribando-fortalezas" title="Derribando Fortalezas" target="_blank" style="color: #cccccc; text-decoration: none;">Derribando Fortalezas</a></div>
+      </iframe>
+      
+      <div class="mt-4">
+        <a href="https://soundcloud.com/pullingdownstrongholds" class="btn btn-custom" target="_blank">
+          <i class="fab fa-soundcloud me-2"></i> More on SoundCloud
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Carousel Section - UPDATED TO 6 IMAGES -->
+  <section id="gallery" class="section-dark">
+    <div class="container">
+      <h2 class="section-title text-center">📸 Ministry Gallery</h2>
+      
+      <div id="galleryCarousel" class="carousel slide gallery-carousel" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+          <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/image1.jpg" class="d-block w-100" alt="Out Now: Derrumbando Fortalezas">
+            <div class="carousel-caption">
+              <h5>Out Now: Derrumbando Fortalezas</h5>
+              <p>Latest album release featuring powerful tracks of faith</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="images/image2.jpg" class="d-block w-100" alt="My First Album">
+            <div class="carousel-caption">
+              <h5>My First Album</h5>
+              <p>Giving God All The Glory in this debut project</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="images/image3.jpg" class="d-block w-100" alt="Ultimate Vision Ministry Outreach">
+            <div class="carousel-caption">
+              <h5>Community Outreach</h5>
+              <p>Ultimate Vision Ministries</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="images/image4.jpg" class="d-block w-100" alt="Live Performance">
+            <div class="carousel-caption">
+              <h5>Grew up in the South</h5>
+              <p>240 Atlanta St. Projects</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="images/image5.jpg" class="d-block w-100" alt="Studio Session">
+            <div class="carousel-caption">
+              <h5>Life away from God</h5>
+              <p>Hurt turned to inspiration</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="images/image6.jpg" class="d-block w-100" alt="Worship Event">
+            <div class="carousel-caption">
+              <h5>Growing up </h5>
+              <p>is part of the process</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Message Me Section -->
+  <section id="message" class="section-dark">
+    <div class="container">
+      <h2 class="section-title text-center">💬 Get In Touch</h2>
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <form class="message-form" action="https://formspree.io/f/xpwjnrqn" method="POST">
+            <div class="mb-3">
+              <input type="text" name="name" class="form-control" placeholder="Your Name" required />
+            </div>
+            <div class="mb-3">
+              <input type="email" name="email" class="form-control" placeholder="Your Email" required />
+            </div>
+            <div class="mb-3">
+              <textarea name="message" class="form-control" rows="5" placeholder="Your Message" required></textarea>
+            </div>
+            <div class="text-center">
+              <button type="submit" class="btn btn-custom">Send Message</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Media Section -->
+  <section class="section-dark text-center">
+    <div class="container">
+      <h2 class="section-title">📲 Follow The Ministry</h2>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/profile.php?id=61579912436738" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://x.com/DownPullin27433" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/p_downstrongholds/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.youtube.com/@PullingDownStrongholds" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://soundcloud.com/daniel-de-leon?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank" aria-label="SoundCloud"><i class="fab fa-soundcloud"></i></a>
+        <a href="https://spotify.com/pullingdownstrongholds" target="_blank" aria-label="Spotify"><i class="fab fa-spotify"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-4">
+    <div class="container">
+      <p>&copy; 2025 Pulling Down StrongHolds. All rights reserved.</p>
+      <p class="small">Music with purpose. Faith in every verse.</p>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <script>
+    // Create particles for background animation - UPDATED: Larger and White
+    function createParticles() {
+      const container = document.getElementById('particles');
+      const particleCount = 25; // Reduced count slightly for larger particles
+      
+      for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        particle.classList.add('particle');
+        
+        // Larger size between 8-20px (increased from 3-8px)
+        const size = Math.random() * 12 + 8;
+        particle.style.width = `${size}px`;
+        particle.style.height = `${size}px`;
+        
+        // Random position
+        particle.style.left = `${Math.random() * 100}%`;
+        particle.style.top = `${Math.random() * 100}%`;
+        
+        // Random animation duration
+        const duration = Math.random() * 10 + 15;
+        particle.style.animationDuration = `${duration}s`;
+        
+        // Random delay
+        const delay = Math.random() * 5;
+        particle.style.animationDelay = `${delay}s`;
+        
+        container.appendChild(particle);
+      }
+    }
+    
+    // Navbar scroll effect
+    function toggleNavbarBackground() {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('navbar-scrolled');
+      } else {
+        navbar.classList.remove('navbar-scrolled');
+      }
+    }
+    
+    // Initialize when page loads
+    document.addEventListener('DOMContentLoaded', function() {
+      createParticles();
+      toggleNavbarBackground();
+      
+      // Initialize carousel with options
+      const myCarousel = new bootstrap.Carousel(document.getElementById('galleryCarousel'), {
+        interval: 4000,
+        wrap: true,
+        touch: true
+      });
+      
+      // Add scroll event listener
+      window.addEventListener('scroll', toggleNavbarBackground);
+      
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          
+          const targetId = this.getAttribute('href');
+          if (targetId === '#') return;
+          
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            targetElement.scrollIntoView({
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
